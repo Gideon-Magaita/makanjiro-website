@@ -53,6 +53,7 @@
                   <thead>
                     <tr>
                       <th>Title</th>
+                      <th>Icon Name</th>
                       <th>Description</th>
                       <th>Image</th>
                       <th>Date</th>
@@ -64,6 +65,7 @@
                      
                       <tr> 
                         <td>{{ f.title }}</td>
+                        <td>{{ f.icon_class }}</td>
                         <td>{{ f.description|safe }}</td>
                          {% if f.image %}
                         <td>

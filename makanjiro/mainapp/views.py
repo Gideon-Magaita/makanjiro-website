@@ -110,6 +110,14 @@ def service(request):
     return render(request,'pages/users/service.html',context)
 
 
+def detail_service(request,id):
+    ser = Service.objects.get(id=id)
+    context={
+        'ser':ser,
+    }
+    return render(request,'pages/users/service-details.html',context)
+
+
 def projects(request):
     project = Project.objects.all()
     context = {

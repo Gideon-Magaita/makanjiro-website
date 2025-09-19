@@ -42,6 +42,7 @@ class Choosing(models.Model):
 
 class Reasons_for_choosing(models.Model):
     title = models.CharField(max_length=200)
+    icon_class = models.CharField(max_length=50, default='fa-star')#predefined icon
     description = RichTextField()
     date = models.DateField(auto_now_add=True)
 
@@ -79,6 +80,7 @@ class Special_point(models.Model):
 class Flexibility(models.Model):
     title = models.CharField(max_length=200,default=None)
     description = RichTextField()
+    icon_class = models.CharField(max_length=50, default='fa-star')#predefined icon
     image = models.ImageField(max_length=200,upload_to='images/',blank=True,default=None)
     date = models.DateField(auto_now_add=True)
 

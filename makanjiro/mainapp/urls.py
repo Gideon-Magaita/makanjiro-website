@@ -12,6 +12,8 @@ urlpatterns = [
     path('projects/',views.projects,name='project'),
     path('shipment/',views.shipment,name='shipment'),
     path('contact/',views.contact,name='contact'),
+    path('detail_service/<int:id>',views.detail_service,name='detail_service'),
+
     #admin urls
     path('admin_home',admins.admin_home,name='admin_home'),
     #admin home page urls

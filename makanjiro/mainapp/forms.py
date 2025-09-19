@@ -53,10 +53,11 @@ class ChoosingForm(forms.ModelForm):
 class Reasons_for_choosingForm(forms.ModelForm):
     class Meta:
         model = Reasons_for_choosing
-        fields=['title','description']
+        fields=['title','icon_class','description']
 
         widgets={
             'title':forms.TextInput(attrs={'class':'form-control','placeholder':'Enter title','required':'required'}),
+            'icon_class':forms.TextInput(attrs={'class':'form-control','placeholder':'Enter icon name','required':'required'}),
             'description':forms.Textarea(attrs={'class':'form-control','placeholder':'Enter description','required':'required'}),
         }
 
@@ -96,11 +97,12 @@ class Special_pointForm(forms.ModelForm):
 class FlexibilityForm(forms.ModelForm):
     class Meta:
         model = Flexibility
-        fields=['title','description','image']
+        fields=['title','icon_class','description','image']
 
         widgets={
             'image':forms.ClearableFileInput(attrs={'class': 'form-control'}),
             'title':forms.TextInput(attrs={'class':'form-control','placeholder':'Enter title','required':'required'}),
+            'icon_class':forms.TextInput(attrs={'class':'form-control','placeholder':'Enter icon name','required':'required'}),
             'description':forms.Textarea(attrs={'class':'form-control','placeholder':'Enter description','required':'required'}),
         }
 
